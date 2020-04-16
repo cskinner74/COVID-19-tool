@@ -6,7 +6,11 @@ import argparse
 import sys
 import requests
 import json
-from pprint import pprint
+assert sys.version_info >= (3, 5)
+
+# Require Python 3
+if sys.version_info[0] < 3:
+    sys.exit("\n\nCurrent Python version: "+str(sys.version_info[0])+"\nMust be using Python 3.5+\nIf Python3 is installed, call script with 'python3 tool.py\nExiting.")
 
 # Intro Text:
 print("COVID-19 Analysis Tool by Cody Skinner")
